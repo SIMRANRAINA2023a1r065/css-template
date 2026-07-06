@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+.flex-container,
+.flex-item-2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 10px;
+}
+.flex-container{
+    padding: 12px;
+    box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.2);
+    /* to keep the header  fixed in the top itself that while scrolling down also it stays at the same position */
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+.building{
+    background-image: url("https://www.w3schools.com/w3images/architect.jpg");
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* becomes in equal to container and does not repeats the image */
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: top bottom, left-right */
+    margin : 0px 8px;
+}
+/* use this for directly target the child by > sign */
+.building > p{
+     color: white;
+     font-size: 24px;
+     word-spacing: 10px;    
+}
+.building  > p >span{
+    /* span tag converted to inline-block as widtg/height does not works in inline element  */
+    display: inline-block;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+}
